@@ -1,0 +1,2 @@
+[{"key":"title","english":"CRPC Prognosis Prediction"},{"key":"article_link","english":"It’s not for clinical use.
+Original article was linked as following site."},{"key":"accept_and_start_prediction","english":"Accept and Start Prediction"}]
