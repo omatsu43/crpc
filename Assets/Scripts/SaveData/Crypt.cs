@@ -9,10 +9,8 @@ using System.Collections.Generic;
     {
  
         private const string AesIV = @"jCddaOybW3zEh0Kl";
-//        private const string AesIV = @"ogqKdaZ6ou0cde4D";
 
         private const string AesKey = @"giVJrbHRlWBDIggF";
-//        private const string AesKey = @"EkomymCCpnzenaqL";
  
         public static string Encrypt(string text)
         {

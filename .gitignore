@@ -49,3 +49,7 @@ Thumbs.db
 
 #python bytecode cache, for some plugins.
 *.pyc
+
+# Builds android, ios
+/android
+/ios

@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 namespace Localization
 {
-    /// <summary>
-    ///  キー設定用
-    /// </summary>
     [RequireComponent(typeof(Text))]
     public class LocalizedText : MonoBehaviour
     {
@@ -30,7 +27,6 @@ namespace Localization
         private IEnumerator Start()
         {
             default_font = UI.font;
-            // mplus = Resources.Load<Font>("Fonts/mplus-1p-regular");
             thsarabunnew = Resources.Load<Font>("Fonts/THSarabunNew");
 
             while (!LocalizationManager.IsReady) 
@@ -68,18 +64,12 @@ namespace Localization
             }
         }
 
-        /// <summary>
-        /// キー変更
-        /// </summary>
         public void TextWithKey(string key, params object[] args)
         {
             this.key = key;
             Text(args);
         }
 
-        /// <summary>
-        /// テキストを設定する
-        /// </summary>
         public void Text(params object[] args)
         {
             string format = LocalizationManager.GetLocalizedFormat(key);

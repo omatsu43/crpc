@@ -4,9 +4,6 @@ using System.Collections;
 
 namespace Localization
 {
-    /// <summary>
-    ///  キー設定用
-    /// </summary>
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class LocalizedTextMeshPro : MonoBehaviour
     {
@@ -51,18 +48,12 @@ namespace Localization
             }
         }
 
-        /// <summary>
-        /// キー変更
-        /// </summary>
         public void TextWithKey(string key, params object[] args)
         {
             this.key = key;
             Text(args);
         }
 
-        /// <summary>
-        /// テキストを設定する
-        /// </summary>
         public void Text(params object[] args)
         {
             string format = LocalizationManager.GetLocalizedFormat(key);

@@ -9,14 +9,8 @@ public class LocalizationManager : MonoBehaviour {
     private static readonly string missingTextString = "Localized text not found";
     private static readonly string missingFormatString = "{0}";
 
-    /// <summary>
-    /// 準備状態を取得する
-    /// </summary>
     public static bool IsReady { get; private set; } = false;
 
-    /// <summary>
-    /// 使用言語
-    /// </summary>
     public static SystemLanguage lang;
 
     void Awake()
@@ -25,29 +19,20 @@ public class LocalizationManager : MonoBehaviour {
         LoadLocalizedText();
     }
 
-    /// <summary>
-    /// 読み込み開始
-    /// </summary>
     public static void LoadLocalizedText()
     {
         if (IsReady) return;
         LoadAsset();
     }
 
-    /// <summary>
-    /// 読み込み
-    /// </summary>
     public static void LoadAsset()
     {
         TextAsset textAsset = Resources.Load ("Texts/LocalizeData") as TextAsset;
         string jsonString = "{\"items\":" + textAsset.text + "}";
-        string jsonStringEscape = jsonString.Replace(System.Environment.NewLine, "\\n"); // 改行を Json で扱える文字コードに変換する
+        string jsonStringEscape = jsonString.Replace(System.Environment.NewLine, "\\n");
         CreateDictionary(jsonStringEscape);  
     }
- 
-    /// <summary>
-    /// 設定する
-    /// </summary>
+
     private static void CreateDictionary(string dataAsJson)
     {
         localizedText = new Dictionary<string, LocalizationItem>();
@@ -77,9 +62,6 @@ public class LocalizationManager : MonoBehaviour {
         return str;
     }
 
-    /// <summary>
-    /// ローカライズされたテキストフォーマットを取得する
-    /// </summary>
     public static string GetLocalizedFormat(string key)
     {
         localizedText.TryGetValue(key, out LocalizationItem result);
