@@ -1,6 +1,6 @@
 # CRPC Prognosis Prediction
 ## Introduction
-This app predict crpc prognosis.
+This app predicts crpc prognosis.
 
 <img src="https://user-images.githubusercontent.com/56634718/85113667-9e3bc100-b252-11ea-917e-c2184c63b683.png" width="200">    <img src="https://user-images.githubusercontent.com/56634718/85113659-9bd96700-b252-11ea-952a-eb8556af90a4.png" width="200">
 
